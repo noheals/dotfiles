@@ -5,7 +5,10 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 
 set nobackup
+<<<<<<< HEAD
 set noundofile
+=======
+>>>>>>> 484d454a06f11d29e5137c605dbab6196455fc13
 
 execute pathogen#infect()
 filetype plugin indent on
@@ -25,8 +28,11 @@ color desert
 if has("gui_running")
   " Set a nicer font.
   set guifont=Consolas:h11:cDEFAULT
+<<<<<<< HEAD
   set lines=40 columns=120
   winp 850 120
+=======
+>>>>>>> 484d454a06f11d29e5137c605dbab6196455fc13
   " Hide the toolbar.
   set guioptions-=T
 endif
