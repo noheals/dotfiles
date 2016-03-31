@@ -1,7 +1,32 @@
 set nocompatible
+set shell=cmd
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
+
+set nobackup
+
+execute pathogen#infect()
+filetype plugin indent on
+
+" Display line and column number in bottom ruler.
+set ruler
+
+" Display the line numbers.
+set number
+
+" Activate syntax highlighting.
+syntax enable
+
+" Set a nice theme.
+color desert
+
+if has("gui_running")
+  " Set a nicer font.
+  set guifont=Consolas:h11:cDEFAULT
+  " Hide the toolbar.
+  set guioptions-=T
+endif
 
 set diffexpr=MyDiff()
 function MyDiff()
