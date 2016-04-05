@@ -7,7 +7,24 @@ behave mswin
 set nobackup
 set noundofile
 
-execute pathogen#infect()
+" set the runtime path to include Vundle and initialize
+set rtp+=$VIM/vimfiles/bundle/Vundle.vim/
+let path='$VIM/vimfiles/bundle'
+call vundle#begin(path)
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
 filetype plugin indent on
 
 " Display line and column number in bottom ruler.
